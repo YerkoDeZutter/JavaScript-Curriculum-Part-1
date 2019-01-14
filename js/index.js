@@ -7,9 +7,7 @@ function CNpc(name, age, items_to_give) {
   this.age = age;
   this.items_to_give = items_to_give;
 
-  console.log("hello my name is " + this.name);
-  console.log("my age is " + this.age);
-  console.log("and the i get is " + this.items_to_give);
+  console.log("hello my name is " + this.name + " my age is " + this.age + "  and i give you " + this.items_to_give);
 
 }
 
