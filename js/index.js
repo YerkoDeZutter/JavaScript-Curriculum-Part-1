@@ -70,5 +70,3 @@ function attack(){
 }
 
 let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8}, window.addEventListener("click", attack));
-
-//attack()
