@@ -57,14 +57,18 @@ for( var i = 0 ; i < 5 ; i++ ){
 //-----THE PLAYER -----
 function CChar(name, level, life, weapon, attack){
 
-
+  this.name = name;
+  this.level = level;
+  this.life = life;
+  this.weapon = weapon;
+  this.attack = attack;
 
 }
 
 function attack(){
-  console.log(weapon.name + " " + weapon.damage)
+  console.log(mainCharacter.name + " aanval met het wapen " + weapon.name + " de schade is " + (mainCharacter.level * weapon.damage))
 }
 
-let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8}, this.attack());
+let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8}, window.addEventListener("click", attack));
 
-//new weapon("sword", 8)
+//attack()
