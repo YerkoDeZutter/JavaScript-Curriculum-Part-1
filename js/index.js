@@ -17,7 +17,7 @@ let NPC = new CNpc("zip", 18, ["ziper", "rits"]);
 
 
 
-
+console.log("--------------------------------------------------")
 //-----THE SHOP------
 
 function shop(naam, physic, magic, minLevel, available) {
@@ -32,10 +32,6 @@ function shop(naam, physic, magic, minLevel, available) {
   //   console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
   // }
 
-  if (this.minLevel > 9) {
-    console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
-  }
-
 }
 
 let tekoop = [];
@@ -48,14 +44,21 @@ for (var i = 0; i < 5; i++) {
   tekoop.push(new shop("axe", 110, 120, 10, false))
 }
 
+tekoop.pop();
+
 tekoop.push(new shop("big sword", 200, 20, 9, false))
 tekoop.push(new shop("big wand", 19, 300, 11, true))
 tekoop.push(new shop("sandwitch", 1000, 1000, 20, true))
 
+for( var i = 0 ; i < tekoop.length ; i++)
+if (tekoop[i].minLevel > 9) {
+  console.log(tekoop[i].naam + " " + tekoop[i].physic + " " + tekoop[i].magic + " " + tekoop[i].minLevel + " " + tekoop[i].available);
+}
 
 
 
 
+console.log("--------------------------------------------------")
 //-----THE PLAYER -----
 
 
