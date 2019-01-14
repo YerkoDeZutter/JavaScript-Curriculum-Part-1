@@ -73,8 +73,10 @@ for( var i = 0 ; i < 5 ; i++ ){
 //
 // let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8});
 
+
+
 let mainCharacter = {
-  name : "cap",
+  name : prompt("Please enter your name", "capie"),
   level : 5,
   life : 77,
   weapon : {name : "sword", damage : 8},
