@@ -55,18 +55,54 @@ for( var i = 0 ; i < 5 ; i++ ){
 
 
 //-----THE PLAYER -----
-function CChar(name, level, life, weapon, attack){
+// function CChar(name, level, life, weapon){
+//
+//   this.name = name;
+//   this.level = level;
+//   this.life = life;
+//   this.weapon = weapon;
+//
+//   function attack(){
+//     console.log(mainCharacter.name + " aanval met het wapen " + weapon.name + " de schade is " + (mainCharacter.level * weapon.damage));
+//     enemy.attack();
+//   }
+//
+//   this.attack();
+//
+// }
+//
+// let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8});
 
-  this.name = name;
-  this.level = level;
-  this.life = life;
-  this.weapon = weapon;
-  this.attack = attack;
+let mainCharacter = {
+  name : "cap",
+  level : 5,
+  life : 77,
+  weapon : {name : "sword", damage : 8},
 
+  attack : function(){
+      console.log(mainCharacter.name + " aanval met het wapen " + mainCharacter.weapon.name + " de schade is " + (mainCharacter.level * mainCharacter.weapon.damage));
+      enemy.attack();
+    }
 }
 
-function attack(){
-  console.log(mainCharacter.name + " aanval met het wapen " + weapon.name + " de schade is " + (mainCharacter.level * weapon.damage))
+
+
+
+
+//-----THE ENEMY-----
+
+let enemy = {
+  name : "map",
+  level : 4,
+  life : 46,
+  weapon : {name : "sword", damage : 5},
+
+  attack : function(){
+      console.log(enemy.name + " aanval met het wapen " + enemy.weapon.name + " de schade is " + (enemy.level * enemy.weapon.damage));
+    }
 }
 
-let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8}, window.addEventListener("click", attack));
+
+
+// window.addEventListener("click", mainCharacter.attack());
+mainCharacter.attack()
