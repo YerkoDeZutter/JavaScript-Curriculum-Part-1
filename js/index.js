@@ -50,28 +50,16 @@ for( var i = 0 ; i < 5 ; i++ ){
   tekoop.push(new shop("axe", 110, 120, 10, false))
 }
 
+tekoop.push(new shop("big sword", 200, 20, 9, false))
+tekoop.push(new shop("big wand", 19, 300, 11, true))
+tekoop.push(new shop("sandwitch", 1000, 1000, 20, true))
+
 
 
 
 
 //-----THE PLAYER -----
-// function CChar(name, level, life, weapon){
-//
-//   this.name = name;
-//   this.level = level;
-//   this.life = life;
-//   this.weapon = weapon;
-//
-//   function attack(){
-//     console.log(mainCharacter.name + " aanval met het wapen " + weapon.name + " de schade is " + (mainCharacter.level * weapon.damage));
-//     enemy.attack();
-//   }
-//
-//   this.attack();
-//
-// }
-//
-// let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8});
+
 
 
 
@@ -82,7 +70,10 @@ let mainCharacter = {
   weapon : {name : "sword", damage : 8},
 
   attack : function(){
-      console.log(mainCharacter.name + " aanval met het wapen " + mainCharacter.weapon.name + " de schade is " + (mainCharacter.level * mainCharacter.weapon.damage));
+      let CurentDamage = mainCharacter.level * mainCharacter.weapon.damage;
+      console.log(mainCharacter.name + " aanval met het wapen " + mainCharacter.weapon.name + " de schade is " + CurentDamage);
+      console.log("enemyhealth went from " + enemy.life + " to " + (enemy.life - CurentDamage))
+      enemy.life = enemy.life - CurentDamage;
       enemy.attack();
     }
 }
@@ -100,7 +91,10 @@ let enemy = {
   weapon : {name : "sword", damage : 5},
 
   attack : function(){
-      console.log(enemy.name + " aanval met het wapen " + enemy.weapon.name + " de schade is " + (enemy.level * enemy.weapon.damage));
+    let CurentDamage = enemy.level * enemy.weapon.damage;
+      console.log(enemy.name + " aanval met het wapen " + enemy.weapon.name + " de schade is " + CurentDamage);
+      console.log("enemyhealth went from " + mainCharacter.life + " to " + (mainCharacter.life - CurentDamage));
+      mainCharacter.life = mainCharacter.life - CurentDamage;
     }
 }
 
