@@ -1,4 +1,7 @@
-function CChar(name, age, items_to_give){
+//-----THE NPC------
+
+
+function CNpc(name, age, items_to_give){
 
   this.name = name;
   this.age = age;
@@ -9,6 +12,15 @@ function CChar(name, age, items_to_give){
   console.log("and the i get is " + this.items_to_give);
 
 }
+
+let character = new CNpc("zip", 18, ["ziper", "rits"]);
+
+
+
+
+
+
+//-----THE SHOP------
 
 function shop(naam, physic, magic, minLevel, available){
 
@@ -38,6 +50,21 @@ for( var i = 0 ; i < 5 ; i++ ){
   tekoop.push(new shop("axe", 110, 120, 10, false))
 }
 
-//"shrunken heads", "brooms", "axe"
 
-let character = new CChar("zip", 18, ["ziper", "rits"]);
+
+
+
+//-----THE PLAYER -----
+function CChar(name, level, life, weapon, attack){
+
+
+
+}
+
+function attack(){
+  console.log(weapon.name + " " + weapon.damage)
+}
+
+let mainCharacter = new CChar("cap", 5, 77, weapon = {name : "sword", damage : 8}, this.attack());
+
+//new weapon("sword", 8)
