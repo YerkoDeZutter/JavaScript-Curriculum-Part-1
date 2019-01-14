@@ -62,49 +62,6 @@ console.log("--------------------------------------------------")
 //-----THE PLAYER -----
 
 
-
-
-// let mainCharacter = {
-//   name : prompt("Please enter your name", "capie"),
-//   level : 5,
-//   life : 77,
-//   weapon : {name : "sword", damage : 8},
-//
-//   attack : function(){
-//       let CurentDamage = mainCharacter.level * mainCharacter.weapon.damage;
-//       console.log(mainCharacter.name + " aanval met het wapen " + mainCharacter.weapon.name + " de schade is " + CurentDamage);
-//       console.log("enemyhealth went from " + enemy.life + " to " + (enemy.life - CurentDamage))
-//       enemy.life = enemy.life - CurentDamage;
-//       enemy.attack();
-//     }
-// }
-//
-//
-//
-//
-//
-// //-----THE ENEMY-----
-//
-// let enemy = {
-//   name : "map",
-//   level : 4,
-//   life : 46,
-//   weapon : {name : "sword", damage : 5},
-//
-//   attack : function(){
-//     let CurentDamage = enemy.level * enemy.weapon.damage;
-//       console.log(enemy.name + " aanval met het wapen " + enemy.weapon.name + " de schade is " + CurentDamage);
-//       console.log("enemyhealth went from " + mainCharacter.life + " to " + (mainCharacter.life - CurentDamage));
-//       mainCharacter.life = mainCharacter.life - CurentDamage;
-//     }
-// }
-
-
-
-
-
-//-----NESTED VERSION-----
-
 function character(name, level, life, weapon) {
 
   this.name = name;
