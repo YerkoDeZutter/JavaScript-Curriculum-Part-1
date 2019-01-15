@@ -127,3 +127,10 @@ mainCharacter.attack()
 //-----BONUS CODE------
 
 let leaveButton = document.querySelector(".leave");
+
+leaveButton.addEventListener("click", leavePage);
+
+function leavePage(){
+  let leaveParent = leaveButton.closest(".page");
+  leaveParent.style.display = ("none");
+}
