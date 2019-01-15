@@ -50,9 +50,10 @@ tekoop.push(new shop("big sword", 200, 20, 9, false))
 tekoop.push(new shop("big wand", 19, 300, 11, true))
 tekoop.push(new shop("sandwitch", 1000, 1000, 20, true))
 
-for( var i = 0 ; i < tekoop.length ; i++)
-if (tekoop[i].minLevel > 9) {
-  console.log(tekoop[i].naam + " " + tekoop[i].physic + " " + tekoop[i].magic + " " + tekoop[i].minLevel + " " + tekoop[i].available);
+for (var i = 0; i < tekoop.length; i++) {
+  if (tekoop[i].minLevel > 9) {
+    console.log(tekoop[i].naam + " " + tekoop[i].physic + " " + tekoop[i].magic + " " + tekoop[i].minLevel + " " + tekoop[i].available);
+  }
 }
 
 
@@ -95,7 +96,10 @@ function character(name, level, life, weapon) {
 
 }
 
-let mainCharacter = new character("cap", 5, 77, {name : "sword", damage : 8});
+let mainCharacter = new character("cap", 5, 77, {
+  name: "sword",
+  damage: 8
+});
 
 
 
