@@ -32,12 +32,13 @@ function shop(naam, physic, magic, minLevel, available) {
   //   console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
   // }
 
-  var div = document.createElement("div");
-div.style.width = "100px";
-div.style.height = "100px";
-div.style.background = "red";
-div.style.color = "white";
-div.innerHTML = "Hello";
+  let div = document.createElement("div");
+  this.div = div;
+this.div.style.width = "100px";
+this.div.style.height = "100px";
+this.div.style.background = "red";
+this.div.style.color = "white";
+this.div.innerHTML = "Hello";
 
 document.getElementById("shop").appendChild(div);
 
