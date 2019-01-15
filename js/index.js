@@ -32,6 +32,15 @@ function shop(naam, physic, magic, minLevel, available) {
   //   console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
   // }
 
+  var div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.background = "red";
+div.style.color = "white";
+div.innerHTML = "Hello";
+
+document.getElementById("shop").appendChild(div);
+
 }
 
 let tekoop = [];
