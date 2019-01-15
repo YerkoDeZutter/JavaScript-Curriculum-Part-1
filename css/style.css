@@ -26,3 +26,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.leave{
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}

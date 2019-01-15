@@ -35,7 +35,7 @@ function shop(naam, physic, magic, minLevel, available) {
   this.div.className = "shop-item";
   this.div.style.backgroundImage = "url('img/" + this.naam + ".png')";
 
-document.getElementById("shop-choices").appendChild(div);
+  document.getElementById("shop-choices").appendChild(div);
 
 }
 
@@ -111,3 +111,19 @@ let mainCharacter = new character("cap", 5, 77, {
 //-----ACTIVATE-----
 // window.addEventListener("click", mainCharacter.attack());
 mainCharacter.attack()
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----BONUS CODE------
+
+let leaveButton = document.querySelector(".leave");
