@@ -34,11 +34,8 @@ function shop(naam, physic, magic, minLevel, available) {
 
   let div = document.createElement("div");
   this.div = div;
-this.div.style.width = "100px";
-this.div.style.height = "100px";
-this.div.style.background = "red";
-this.div.style.color = "white";
-this.div.innerHTML = "Hello";
+  this.div.className = "shop-item";
+  this.div.innerHTML = "Hello";
 
 document.getElementById("shop").appendChild(div);
 
