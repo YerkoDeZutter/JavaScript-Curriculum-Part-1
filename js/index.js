@@ -79,7 +79,7 @@ function character(name, level, life, weapon) {
     }
   }
 
-  this.attack = function() {
+  this.attack = () => {
     let CurentDamage = this.level * this.weapon.damage;
     console.log(this.name + " attacked " + opponentCharacter.name + " whit a " + this.weapon.name);
     console.log("enemyhealth went from " + opponentCharacter.life + " to " + (opponentCharacter.life - CurentDamage));
