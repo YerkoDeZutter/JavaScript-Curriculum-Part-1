@@ -5,6 +5,9 @@
 
 #shop{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .shop-item{
@@ -12,4 +15,7 @@
   width: 100px;
   height: 100px;
   color: white;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
 }

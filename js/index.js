@@ -35,7 +35,7 @@ function shop(naam, physic, magic, minLevel, available) {
   let div = document.createElement("div");
   this.div = div;
   this.div.className = "shop-item";
-  this.div.innerHTML = "Hello";
+  this.div.innerHTML = "BUY ME OR YOU WILL LOSE";
 
 document.getElementById("shop").appendChild(div);
 
