@@ -28,11 +28,7 @@ function shop(naam, physic, magic, minLevel, available) {
   this.minLevel = minLevel;
   this.available = available;
 
-  // this.imgName = "../img/"
-
-  // if(this.available){
-  //   console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
-  // }
+  //---CREAT SPRITES---
 
   let div = document.createElement("div");
   this.div = div;
