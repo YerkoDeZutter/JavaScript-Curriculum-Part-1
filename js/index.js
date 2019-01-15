@@ -28,6 +28,8 @@ function shop(naam, physic, magic, minLevel, available) {
   this.minLevel = minLevel;
   this.available = available;
 
+  // this.imgName = "../img/"
+
   // if(this.available){
   //   console.log(this.naam + " " + this.physic + " " + this.magic + " " + this.minLevel + " " + this.available);
   // }
@@ -35,7 +37,7 @@ function shop(naam, physic, magic, minLevel, available) {
   let div = document.createElement("div");
   this.div = div;
   this.div.className = "shop-item";
-  this.div.innerHTML = "BUY ME OR YOU WILL LOSE";
+  this.div.style.backgroundImage = "url('img/" + this.naam + ".png')";
 
 document.getElementById("shop-choices").appendChild(div);
 
@@ -44,7 +46,7 @@ document.getElementById("shop-choices").appendChild(div);
 let tekoop = [];
 
 for (var i = 0; i < 5; i++) {
-  tekoop.push(new shop("shrunken heads", 11, 12, 1, true))
+  tekoop.push(new shop("shrunken_heads", 11, 12, 1, true))
 }
 
 for (var i = 0; i < 5; i++) {
@@ -53,8 +55,8 @@ for (var i = 0; i < 5; i++) {
 
 tekoop.pop();
 
-tekoop.push(new shop("big sword", 200, 20, 9, false))
-tekoop.push(new shop("big wand", 19, 300, 11, true))
+tekoop.push(new shop("big_sword", 200, 20, 9, false))
+tekoop.push(new shop("big_wand", 19, 300, 11, true))
 tekoop.push(new shop("sandwitch", 1000, 1000, 20, true))
 
 for (var i = 0; i < tekoop.length; i++) {
