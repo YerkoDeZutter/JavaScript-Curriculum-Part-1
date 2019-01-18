@@ -1,12 +1,14 @@
 *{
   padding: 0;
   margin: 0;
+  font-weight: bold;
 }
 
 #shop{
   height: 100vh;
   background-color: #6b2e2e;
   position: absolute;
+  z-index: 2;
 }
 
 #shop-choices{
@@ -49,6 +51,7 @@
 #battle{
   height: 100vh;
    background-color: #0d7900;
+   position: relative;
 }
 
 .enemy{
@@ -59,4 +62,97 @@
   -webkit-background-size: contain;
   background-size: contain;
   background-position: center;
+}
+
+
+
+
+
+
+
+
+/* SVG */
+
+@keyframes squiggly-anim {
+  0% {
+    filter: url('#squiggly-0');
+  }
+
+  25% {
+    filter: url('#squiggly-1');
+  }
+
+  50% {
+    filter: url('#squiggly-2');
+  }
+
+  75% {
+    filter: url('#squiggly-3');
+  }
+
+  100% {
+    filter: url('#squiggly-4');
+  }
+}
+
+.text-box{
+  display: none;
+}
+
+.swiggle{
+  animation: squiggly-anim 0.7s linear infinite;
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  max-width: 900px;
+  left: 5%;
+  border: solid 7px rgb(0, 0, 0);
+  overflow: hidden;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.68);
+  z-index: 1;
+}
+
+.swig-BG{
+  position: absolute;
+  bottom: 10px;
+  left: calc(5% + 2px);
+  width: calc(91% + 2px);
+  max-width: 900px;
+  height: 210px;
+  background: url(../img/background1.jpg) rgba(0, 0, 0, 0);
+  background-position: 100% 0px;
+  background-repeat: repeat-y;
+}
+
+.swiggle section{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 45%;
+  height: 80%;
+  background-color: white;
+  padding: 5px;
+  border: solid 5px rgb(0, 0, 0);
+  text-align: center;
+}
+
+.swiggle p{
+  margin: auto;
+}
+
+.swiggle img{
+  float: right;
+}
+
+.arow{
+  margin-left: 50%;
+  margin-top: 10vh;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 50px;
+  border-color: transparent transparent transparent #000000;
+
 }

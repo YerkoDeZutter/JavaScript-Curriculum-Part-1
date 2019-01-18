@@ -20,19 +20,47 @@ function character(name, level, life, weapon) {
     }
   }
 
-  this.attack = () => {
-    let CurentDamage = this.level * this.weapon.damage;
+
+
+  //---ATACK ACTIONS---
+
+  let enemy = document.querySelector(".enemy");
+
+  let textBox = document.querySelector(".text-box")
+
+  let textInBox = document.querySelector("p");
+
+  console.log(textInBox)
+
+  enemy.addEventListener("click", () => {
+    let CurentDamageM = this.level * this.weapon.damage;
     console.log(this.name + " attacked " + opponentCharacter.name + " whit a " + this.weapon.name);
-    console.log("enemyhealth went from " + opponentCharacter.life + " to " + (opponentCharacter.life - CurentDamage));
-    opponentCharacter.life -= CurentDamage;
+    console.log("enemyhealth went from " + opponentCharacter.life + " to " + (opponentCharacter.life - CurentDamageM));
+    opponentCharacter.life -= CurentDamageM;
+
+    textBox.style.display = ("block")
+
+    if(opponentCharacter.life < 1){
+
+      enemy.style.display = "none";
+
+      console.log("the enemy had died")
+
+      textInBox.innerHTML = "you dealt " + CurentDamageM + " damage and your enemy died";
+
+    } else {
 
     console.log("it is enemy's turn");
 
-    CurentDamage = opponentCharacter.level * opponentCharacter.weapon.damage;
+    CurentDamageE = opponentCharacter.level * opponentCharacter.weapon.damage;
     console.log(opponentCharacter.name + " attacked " + this.name + " whit a " + opponentCharacter.weapon.name);
-    console.log("enemyhealth went from " + this.life + " to " + (this.life - CurentDamage));
-    this.life -= CurentDamage;
-  }
+    console.log("enemyhealth went from " + this.life + " to " + (this.life - CurentDamageE));
+    this.life -= CurentDamageE;
+
+    textInBox.innerHTML = "you dealt " + CurentDamageM + " damage and your enemy did " + CurentDamageE + " damage";
+
+    }
+  })
 
 }
 
@@ -45,7 +73,9 @@ let mainCharacter = new character("cap", 5, 77, {
 
 //-----ACTIVATE-----
 // window.addEventListener("click", mainCharacter.attack());
-mainCharacter.attack()
+// mainCharacter.attack()
+// let enemy = document.querySelector(".enemy");
+// enemy.addEventListener("click", mainCharacter.attack(){})
 
 
 
